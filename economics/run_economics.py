@@ -60,7 +60,7 @@ VECTOR_LENGTH_LIST = [8, 16, 32, 64, 128, 256, 512]  # set vector length for TF-
 WRITE_VECTORS_TO_FILE = False
 
 # JSON lines file for storing canonical correlatin results across many runs
-cancor_results_file = open('cancor-results-file.jl', 'a+') # open new file or append to existing
+cancor_results_file = open('cancor-results-file.jsonl', 'a+') # open new file or append to existing
 
 #%%
 # =============================================================================
@@ -128,7 +128,7 @@ print(os.listdir(docdir))
 all_data = []
 
 for file in os.listdir(docdir): 
-    if file.endswith('.jl'):
+    if file.endswith('.jsonl'):
         file_name = file.split('.')[0]  # keep name without extension
         with open(os.path.join(docdir,file), 'rb') as f:
             for line in f:
