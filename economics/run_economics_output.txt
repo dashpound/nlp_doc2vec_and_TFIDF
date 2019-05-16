@@ -1,0 +1,219 @@
+runfile('C:/Users/johnk/Desktop/Grad School/6. Spring 2019/1. MSDS_453_NLP/6. Homework/week5/economics/run_economics.py', wdir='C:/Users/johnk/Desktop/Grad School/6. Spring 2019/1. MSDS_453_NLP/6. Homework/week5/economics')
+
+List of file names in the data directory:
+
+['all.jl']
+
+Beginning and end of the data frame:
+
+                                                 url  ...  labels
+0  https://en.wikipedia.org/wiki/Diphu_railway_st...  ...  random
+1  https://en.wikipedia.org/wiki/George_Hotel,_Sy...  ...  random
+
+[2 rows x 5 columns]
+                                                   url  ...     labels
+209          https://en.wikipedia.org/wiki/Free_market  ...  economics
+210  https://en.wikipedia.org/wiki/Information_asym...  ...  economics
+
+[2 rows x 5 columns]
+
+Number of training documents: 158
+
+Number of training token lists: 158
+['Federal Reserve Bank',
+ 'Sanie cu zurgălăi',
+ 'Nikolai Kynin',
+ 'Tax',
+ 'Real versus nominal value (economics)',
+ 'Xochitl Torres Small',
+ 'Chicago school of economics',
+ 'James Hamilton, 3rd Earl of Arran',
+ 'Černá hora (Bohemian Forest)',
+ 'Gini coefficient']
+['economics',
+ 'random',
+ 'random',
+ 'economics',
+ 'economics',
+ 'random',
+ 'economics',
+ 'random',
+ 'random',
+ 'economics']
+
+Number of testing documents: 53
+
+Number of testing token lists: 53
+["Mothers' Union",
+ 'Crowding out (economics)',
+ 'Coat of arms of Haiti',
+ 'Nobel Memorial Prize in Economic Sciences',
+ 'Walter McLaren',
+ 'Bryson Tiller',
+ 'Colfax High School (Colfax, California)',
+ 'Banks',
+ 'Debt of developing countries',
+ 'Classical economics']
+['random',
+ 'economics',
+ 'random',
+ 'economics',
+ 'random',
+ 'random',
+ 'random',
+ 'economics',
+ 'economics',
+ 'economics']
+
+---------- VECTOR LENGTH  8  ----------
+
+
+Working on TF-IDF vectorization
+
+Working on Doc2Vec vectorization
+
+Canonical correlation betwen TF-IDF and Doc2Vec for vectors of length  8 : 0.409 
+
+
+---------- VECTOR LENGTH  16  ----------
+
+
+Working on TF-IDF vectorization
+
+Working on Doc2Vec vectorization
+
+Canonical correlation betwen TF-IDF and Doc2Vec for vectors of length  16 : 0.65 
+
+
+---------- VECTOR LENGTH  32  ----------
+
+
+Working on TF-IDF vectorization
+
+Working on Doc2Vec vectorization
+
+Canonical correlation betwen TF-IDF and Doc2Vec for vectors of length  32 : 0.858 
+
+
+---------- VECTOR LENGTH  64  ----------
+
+
+Working on TF-IDF vectorization
+
+Working on Doc2Vec vectorization
+
+Canonical correlation betwen TF-IDF and Doc2Vec for vectors of length  64 : 0.978 
+
+
+---------- VECTOR LENGTH  128  ----------
+
+
+Working on TF-IDF vectorization
+
+Working on Doc2Vec vectorization
+
+Canonical correlation betwen TF-IDF and Doc2Vec for vectors of length  128 : 0.983 
+
+
+---------- VECTOR LENGTH  256  ----------
+
+
+Working on TF-IDF vectorization
+
+Working on Doc2Vec vectorization
+
+Canonical correlation betwen TF-IDF and Doc2Vec for vectors of length  256 : 1.0 
+
+
+---------- VECTOR LENGTH  512  ----------
+
+
+Working on TF-IDF vectorization
+
+Working on Doc2Vec vectorization
+
+Canonical correlation betwen TF-IDF and Doc2Vec for vectors of length  512 : 1.0 
+
+
+Summary of Canonoical Correlation between TF-IDF and Doc2Vec Vectorizations
+
+
+Vector Length Correlation
+
+-------------------------
+      8        0.409
+      16        0.65
+      32        0.858
+      64        0.978
+      128        0.983
+      256        1.0
+      512        1.0
+
+TFIDF vectorization. . .
+
+Training tfidf_vectors_training.shape: (158, 512)
+
+Test tfidf_vectors_test.shape: (53, 512)
+
+TF-IDF/Random forest F1 classification performance in test set: 0.981
+
+count vectorization. . .
+
+Training count_vectors_training.shape: (158, 512)
+
+Test count_vectors_test.shape: (53, 512)
+
+Count/Random forest F1 classification performance in test set: 0.981
+
+count vectorization. . .
+
+Training hashing_vectors_training.shape: (158, 512)
+
+Test hashing_vectors_test.shape: (53, 512)
+
+Hashing/Random forest F1 classification performance in test set: 0.943
+
+Begin Doc2Vec Work
+
+Number of processor cores: 8
+
+Working on Doc2Vec vectorization, dimension 50
+
+Training doc2vec_50_vectors.shape: (158, 50)
+
+Test doc2vec_50_vectors_test.shape: (53, 50)
+
+Doc2Vec_50/Random forest F1 classification performance in test set: 0.806
+
+Working on Doc2Vec vectorization, dimension 100
+
+Training doc2vec_100_vectors.shape: (158, 100)
+
+Test doc2vec_100_vectors_test.shape: (53, 100)
+
+Doc2Vec_100/Random forest F1 classification performance in test set: 0.803
+
+Working on Doc2Vec vectorization, dimension 200
+
+Training doc2vec_200_vectors.shape: (158, 200)
+
+Test doc2vec_200_vectors_test.shape: (53, 200)
+
+Doc2Vec_200/Random forest F1 classification performance in test set: 0.773
+
+
+------------------------------------------------------------------------
+
+TF-IDF/Random forest F1 classification performance in test set: 0.981
+
+Count/Random forest F1 classification performance in test set: 0.981
+
+Hashing/Random forest F1 classification performance in test set: 0.943
+
+Doc2Vec_50/Random forest F1 classification performance in test set: 0.806
+
+Doc2Vec_100/Random forest F1 classification performance in test set: 0.803
+
+Doc2Vec_200/Random forest F1 classification performance in test set: 0.773
+
+------------------------------------------------------------------------
